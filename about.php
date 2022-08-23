@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="zxx">
-   
+
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <?php include 'includes/css.php'; ?> 
-      <title> Cyber chip | About-us</title>
+      <title> About Us | Secured Storage</title>
    </head>
    <body>
       <!---header-and-banner-section-->
