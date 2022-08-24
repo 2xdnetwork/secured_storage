@@ -1,10 +1,15 @@
+<?php
+require_once __DIR__ . '/app/DataHelper.php';
+$dataHelper = new DataHelper();
+$GLOBALS['vars'] = $dataHelper->data;
+?>
 <!DOCTYPE html>
 <html lang="zxx">
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <?php include 'includes/css.php'; ?> 
-      <title>Privacy Policy |  Secured Storage, Los Angeles, CA</title>
+      <title>Privacy Policy |  <?= $GLOBALS['vars']['company_name']?>, Los Angeles, CA</title>
    </head>
    <body>
       <!---header-and-banner-section-->
@@ -42,7 +47,7 @@
                   <div class="row">
                      <div class="col-lg-12 col-md-12 col-12">
                         <div class="informationmain-right-content">
-                        <p>Secured Storage (“us”, “we”, or “our”) operates securedstorage.org (the “Site”). This page informs you of our policies regarding the collection, use and disclosure of Personal Information we receive from users of the Site.</p>
+                        <p><?= $GLOBALS['vars']['company_name']?> (“us”, “we”, or “our”) operates <?= $GLOBALS['vars']['domain']?> (the “Site”). This page informs you of our policies regarding the collection, use and disclosure of Personal Information we receive from users of the Site.</p>
                         <p>We use your Personal Information only for providing and improving the Site. By using the Site, you agree to the collection and use of information in accordance with this policy.</p>
                      </div>
                      </div>
@@ -154,7 +159,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>Questions and Complaints</h3>
                         <div class="informationmain-right-content">
-                        <p>We take your privacy concerns seriously.  If you believe we have not complied with this Notice, or you have any other questions, you may contact us at contact@securedstorage.org</p>
+                        <p>We take your privacy concerns seriously.  If you believe we have not complied with this Notice, or you have any other questions, you may contact us at contact@<?= $GLOBALS['vars']['domain']?></p>
                      </div>
                      </div>
                   </div>
@@ -192,50 +197,50 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>SMS Privacy Policy</h3>
                         <div class="informationmain-right-content">
-                        <p>By using the Service, you agree to the terms of this Policy. Secured Storage reserves the right, in its sole discretion, to modify or change this Policy at any time with or without prior notice to you. The date of the last update will be posted at the top of this Policy for your convenience. This Policy, and any changes, are effective as soon as posted. Your continued use of the Service following the posting of any changes to the Policy constitutes your full acceptance of those changes.</p>
+                        <p>By using the Service, you agree to the terms of this Policy. <?= $GLOBALS['vars']['company_name']?> reserves the right, in its sole discretion, to modify or change this Policy at any time with or without prior notice to you. The date of the last update will be posted at the top of this Policy for your convenience. This Policy, and any changes, are effective as soon as posted. Your continued use of the Service following the posting of any changes to the Policy constitutes your full acceptance of those changes.</p>
 
-                        <p>Through the use of the Service, Secured Storage will receive the following information from our third party service provider: your mobile phone number when you send a text message to us, the text of messages that you send to other users of the Service, any user or screen name that you select in connection with the Service, as well as any comments or feedback regarding the Service that you send to us.</p>
+                        <p>Through the use of the Service, <?= $GLOBALS['vars']['company_name']?> will receive the following information from our third party service provider: your mobile phone number when you send a text message to us, the text of messages that you send to other users of the Service, any user or screen name that you select in connection with the Service, as well as any comments or feedback regarding the Service that you send to us.</p>
 
                         <p>We use Personal Information to (a) provide you with the Service, (b) process and respond to inquiries, (c) improve the Service, (d) if necessary, contact you with important announcements or messages, (e) conduct research, and (f) provide anonymous reporting for internal and external clients and partners.</p>
 
-                        <p>Each message that you send through the Service (either to us or to other users of the Service) is stored on our servers. We retain these messages on our servers. Secured Storage utilizes servers and services owned by third parties.</p>
+                        <p>Each message that you send through the Service (either to us or to other users of the Service) is stored on our servers. We retain these messages on our servers. <?= $GLOBALS['vars']['company_name']?> utilizes servers and services owned by third parties.</p>
 
                         <p>We will not rent or sell your Personal Information to other companies or individuals, unless we have your consent. We may use or disclose such information in any of the following limited circumstances:</p>
 
                         <p> <ul class="mb-0 list">
                         <li><i class="fas fa-check-circle"></i>We have your consent.</li>
                         <li><i class="fas fa-check-circle"></i>We need to enforce our Terms of Service.</li>
-                        <li><i class="fas fa-check-circle"></i>We provide such information to trusted businesses or persons for the sole purpose of processing Personal Information on our behalf. When this is done, it is subject to agreements that oblige those parties to process such information only on our instructions and in compliance with this Policy and appropriate confidentiality and security measures.  If the third party fails to comply with our terms, Secured Storage is not accountable in any way for any liability or reimbursement.</li>
+                        <li><i class="fas fa-check-circle"></i>We provide such information to trusted businesses or persons for the sole purpose of processing Personal Information on our behalf. When this is done, it is subject to agreements that oblige those parties to process such information only on our instructions and in compliance with this Policy and appropriate confidentiality and security measures.  If the third party fails to comply with our terms, <?= $GLOBALS['vars']['company_name']?> is not accountable in any way for any liability or reimbursement.</li>
                         <li><i class="fas fa-check-circle"></i>We provide such information to third parties who have entered into non-disclosure agreements with us.</li>
-                        <li><i class="fas fa-check-circle"></i>We provide such information to a company controlled by, or under common control with, Secured Storage for any purpose permitted by this Policy.</li>
+                        <li><i class="fas fa-check-circle"></i>We provide such information to a company controlled by, or under common control with, <?= $GLOBALS['vars']['company_name']?> for any purpose permitted by this Policy.</li>
                         <li><i class="fas fa-check-circle"></i>We respond to subpoenas, court orders, or legal process, or to establish or exercise our legal rights, or the legal rights of others, or defend against legal claims.</li>
-                        <li><i class="fas fa-check-circle"></i>We believe it is necessary to share Personal Information to investigate, prevent, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of Secured Storage’s Terms of Service, or as otherwise required by law.</li>
-                        <li><i class="fas fa-check-circle"></i>We transfer Personal Information about you if Secured Storage is, or its assets are, acquired by or merged with another company.</li></ul></p>
+                        <li><i class="fas fa-check-circle"></i>We believe it is necessary to share Personal Information to investigate, prevent, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of <?= $GLOBALS['vars']['company_name']?>’s Terms of Service, or as otherwise required by law.</li>
+                        <li><i class="fas fa-check-circle"></i>We transfer Personal Information about you if <?= $GLOBALS['vars']['company_name']?> is, or its assets are, acquired by or merged with another company.</li></ul></p>
 
                         <p>We may share aggregated information with others without further notice. An example of this would be the number of people who used the Service in a given month or the total number of texts sent in a given week.</p>
 
-                        <p>Opting out: Secured Storage’s third-party service provider gives you the ability to opt out of the Service for any reason. You can opt out by texting “STOP” or “QUIT".We reserve the right to send you certain communications relating to the Service, such as announcements and administrative messages, without offering you the opportunity to opt-out of receiving them.</p>
+                        <p>Opting out: <?= $GLOBALS['vars']['company_name']?>’s third-party service provider gives you the ability to opt out of the Service for any reason. You can opt out by texting “STOP” or “QUIT".We reserve the right to send you certain communications relating to the Service, such as announcements and administrative messages, without offering you the opportunity to opt-out of receiving them.</p>
 
                         <div class="tabs-content mt-5 mb-5">
                            <div class="row">
                               <div class="col-lg-12 col-md-12 col-12">
                                  <h3>SMS Terms of Service</h3>
                                  <div class="informationmain-right-content">
-                                 <p>Use of the Secured Storage text message-based services (the “Service”) is subject to the following Terms of Service. These terms constitute a legal agreement (the “Agreement”). Please read them carefully.<br><br>
+                                 <p>Use of the <?= $GLOBALS['vars']['company_name']?> text message-based services (the “Service”) is subject to the following Terms of Service. These terms constitute a legal agreement (the “Agreement”). Please read them carefully.<br><br>
 
-                                 Secured Storage will allow several different opportunities, such as a entering a phone number online, to opt-in to SMS services.  The opt-in received will be 'TEXT JOIN to sign up to receive Notifications from Secured Storage.'<br><br>
+                                     <?= $GLOBALS['vars']['company_name']?> will allow several different opportunities, such as a entering a phone number online, to opt-in to SMS services.  The opt-in received will be 'TEXT JOIN to sign up to receive Notifications from Secured Storage.'<br><br>
 
                                  You can cancel the Service at any time. Just text "STOP". After you send the SMS message "STOP" to us, we will send you an SMS message to confirm that you have been unsubscribed. After this, you will no longer receive SMS messages from us. If you want to join again, just sign up as you did the first time, and we will start sending SMS messages to you again.<br><br>
 
                                  We are able to deliver messages to the following mobile phone carriers. Major carriers: AT&T, Verizon Wireless, Sprint, T-Mobile, MetroPCS, U.S. Cellular, Alltel, Boost Mobile, Nextel, and Virgin Mobile. Minor carriers: Alaska Communications Systems (ACS), Appalachian Wireless (EKN), Bluegrass Cellular, Cellular One of East Central IL (ECIT), Cellular One of Northeast Pennsylvania, Cincinnati Bell Wireless, Cricket, Coral Wireless (Mobi PCS), COX, Cross, Element Mobile (Flat Wireless), Epic Touch (Elkhart Telephone), GCI, Golden State, Hawkeye (Chat Mobility), Hawkeye (NW Missouri), Illinois Valley Cellular, Inland Cellular, iWireless (Iowa Wireless), Keystone Wireless (Immix Wireless/PC Man), Mosaic (Consolidated or CTC Telecom), Nex-Tech Wireless, NTelos, Panhandle Communications, Pioneer, Plateau (Texas RSA 3 Ltd), Revol, RINA, Simmetry (TMP Corporation), Thumb Cellular, Union Wireless, United Wireless, Viaero Wireless, and West Central (WCC or 5 Star Wireless). ***Carriers are not liable for delayed or undelivered messages***<br><br>
 
-                                 As always, message and data rates may apply for any messages sent to you from us and to us from you, and Secured Storage is not liable for the cost of any such messages. You will receive recurring messages. If you have any questions about your text plan or data plan, it is best to contact your wireless provider. For all questions about the Service provided by this short code, you can send an email to contact@securedstorage.org.<br><br>
+                                 As always, message and data rates may apply for any messages sent to you from us and to us from you, and <?= $GLOBALS['vars']['company_name']?> is not liable for the cost of any such messages. You will receive recurring messages. If you have any questions about your text plan or data plan, it is best to contact your wireless provider. For all questions about the Service provided by this short code, you can send an email to contact@<?= $GLOBALS['vars']['domain']?>.<br><br>
 
-                                 You understand that anyone with access to your mobile phone may be able to view the messages you receive when using the Service, and you agree that Secured Storage will not be liable to you if this occurs.<br><br>
+                                 You understand that anyone with access to your mobile phone may be able to view the messages you receive when using the Service, and you agree that <?= $GLOBALS['vars']['company_name']?> will not be liable to you if this occurs.<br><br>
 
-                                 You understand that you are not required to consent to the Service to receive any other services from Secured Storage.
+                                 You understand that you are not required to consent to the Service to receive any other services from <?= $GLOBALS['vars']['company_name']?>.
 
-                                 By agreeing to these Terms of Service and providing us with your mobile phone number when you opt in to the Service, you authorize Secured Storage to contact you by text message at your mobile phone number using an automatic telephone dialing system or device, or any other computer assisted technology as applicable.<br><br>
+                                 By agreeing to these Terms of Service and providing us with your mobile phone number when you opt in to the Service, you authorize <?= $GLOBALS['vars']['company_name']?> to contact you by text message at your mobile phone number using an automatic telephone dialing system or device, or any other computer assisted technology as applicable.<br><br>
 
                                  If you have any questions regarding privacy, please read our Privacy Policy.</p>
                               </div>

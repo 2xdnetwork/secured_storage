@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/app/DataHelper.php';
+$dataHelper = new DataHelper();
+$GLOBALS['vars'] = $dataHelper->data;
+?>
 <!DOCTYPE html>
 <html lang="zxx"> 
    
@@ -5,7 +10,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <?php include 'includes/css.php'; ?> 
-      <title>Contact Us | Secured Storage</title>
+      <title>Contact Us | <?= $GLOBALS['vars']['company_name']?></title>
    </head>
    <body>
       <!---header-and-banner-section-->
@@ -70,8 +75,8 @@ email or phone, or send us a message using the contact form.</p>
                               </div>
                               <div class="Effective-sec-item-title">
                                  <h4 class="mb-0">Email</h4>                                 
-                                 <p class="mb-0">contact@securedstorage.org</p>
-                                 <p class="mb-0">support@securedstorage.org</p>
+                                 <p class="mb-0">contact@<?= $GLOBALS['vars']['domain']?></p>
+                                 <p class="mb-0">support@<?= $GLOBALS['vars']['domain']?></p>
                               </div>
                            </div>
                         </div>

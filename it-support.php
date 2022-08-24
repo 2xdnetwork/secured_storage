@@ -1,10 +1,15 @@
+<?php
+require_once __DIR__ . '/app/DataHelper.php';
+$dataHelper = new DataHelper();
+$GLOBALS['vars'] = $dataHelper->data;
+?>
 <!DOCTYPE html>
 <html lang="zxx">
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <?php include 'includes/css.php'; ?> 
-      <title>IT Support |  Secured Storage, Los Angeles, CA</title>
+      <title>IT Support |  <?= $GLOBALS['vars']['company_name']?>, Los Angeles, CA</title>
    </head>
    <body>
       <!---header-and-banner-section-->
@@ -99,7 +104,7 @@
                   <div class="row">
                      <div class="col-lg-12 col-md-12 col-12">
                         <div class="informationmain-right-content">
-                        <p>We completely understand how vital it is to be able to access custom tech support and services anytime and anywhere. That’s why Secured Storage is responsive, problem solver, and adaptive IT managed service provider and IT consultancy who play a big role in providing any IT support, cybersecurity services,  server support, shared data storage support, network support, computer support, and any other information technology related consulting.</p>
+                        <p>We completely understand how vital it is to be able to access custom tech support and services anytime and anywhere. That’s why <?= $GLOBALS['vars']['company_name']?> is responsive, problem solver, and adaptive IT managed service provider and IT consultancy who play a big role in providing any IT support, cybersecurity services,  server support, shared data storage support, network support, computer support, and any other information technology related consulting.</p>
                      </div>
                      </div>
                   </div>
@@ -112,7 +117,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>Managed Support</h3>
                         <div class="informationmain-right-content">
-                        <p>Secured Storage provides a complete set of managed IT services and support for small & mid-sized businesses. Strategic planning is the key to delivering all of our managed IT services. If you are a small business with no IT department, we can manage all of your IT needs giving you the peace of mind needed to focus on your business and if you do have in-house IT department, we can still be help in every aspect of your network infrastructure.</p>
+                        <p><?= $GLOBALS['vars']['company_name']?> provides a complete set of managed IT services and support for small & mid-sized businesses. Strategic planning is the key to delivering all of our managed IT services. If you are a small business with no IT department, we can manage all of your IT needs giving you the peace of mind needed to focus on your business and if you do have in-house IT department, we can still be help in every aspect of your network infrastructure.</p>
                      </div>
                      </div>
                   </div>
@@ -157,7 +162,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>Shared Storage Server</h3>
                         <div class="informationmain-right-content">
-                        <p>If you are a media/production studio running any type of shared storage server like Avid Nexis, Evo Sns, Facilis terrablocks, LumaForge Jellyfish, Qnap, Synology, etc for editing videos and need any help from installation, optimization, maintenance, and ongoing support then consider Secured Storage as your IT consultant because of the following main reasons:</p>
+                        <p>If you are a media/production studio running any type of shared storage server like Avid Nexis, Evo Sns, Facilis terrablocks, LumaForge Jellyfish, Qnap, Synology, etc for editing videos and need any help from installation, optimization, maintenance, and ongoing support then consider <?= $GLOBALS['vars']['company_name']?> as your IT consultant because of the following main reasons:</p>
                         <ul class="mb-0 list">
                            <li><i class="fas fa-check-circle"></i>Affordable pricing </li>
                            <li><i class="fas fa-check-circle"></i>Responsive support</li>
@@ -238,7 +243,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>Penetration Testing</h3>
                         <div class="informationmain-right-content">
-                        <p>Penetration testing (or pen testing) is a simulated cyber attack where professional ethical hackers break into corporate networks to find weaknesses and flaws in network, operating systems, and applications. In fact pen testing shows you where and how a malicious attacker might exploit your network which allows you to mitigate any weaknesses before a real attack occurs. Secured Storage also offers different approaches to pen testing such as Black Box, White Box, and Grey Box for different type of testing such as Network, Web application, Wireless, Social Engineering, and Physical pen testing.</p>
+                        <p>Penetration testing (or pen testing) is a simulated cyber attack where professional ethical hackers break into corporate networks to find weaknesses and flaws in network, operating systems, and applications. In fact pen testing shows you where and how a malicious attacker might exploit your network which allows you to mitigate any weaknesses before a real attack occurs. <?= $GLOBALS['vars']['company_name']?> also offers different approaches to pen testing such as Black Box, White Box, and Grey Box for different type of testing such as Network, Web application, Wireless, Social Engineering, and Physical pen testing.</p>
                      </div>
                      </div>
                   </div>

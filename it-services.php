@@ -1,10 +1,15 @@
+<?php
+require_once __DIR__ . '/app/DataHelper.php';
+$dataHelper = new DataHelper();
+$GLOBALS['vars'] = $dataHelper->data;
+?>
 <!DOCTYPE html>
 <html lang="zxx">
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <?php include 'includes/css.php'; ?> 
-      <title>IT Services |  Secured Storage, Los Angeles, CA</title>
+      <title>IT Services |  <?= $GLOBALS['vars']['company_name']?>, Los Angeles, CA</title>
    </head>
    <body>
       <!---header-and-banner-section-->
@@ -99,8 +104,8 @@
                   <div class="row">
                      <div class="col-lg-12 col-md-12 col-12">
                         <div class="informationmain-right-content">
-                        <p>Secured Storage offers managed “complete”  IT services to small and medium sized businesses in Los Angeles area for more than a decade now. We will work closely with your company so we can understand the operations key points and your facility type in order to better manage your IT / Network infrastructure and make sure your data and network is safe and protected. Our managed IT service package comes with remote monitoring and management which will avoid any network downtime by preventing threats before they can actually happen. </p>
-                        <p>Extensive experience with a diverse lineup of clients has taught us how IT procedures and processes works. With that said, Secured Storage is a one-stop-shop for any IT related work such as IT consulting, IT services, IT support, and IT security.</p>
+                        <p><?= $GLOBALS['vars']['company_name']?> offers managed “complete”  IT services to small and medium sized businesses in Los Angeles area for more than a decade now. We will work closely with your company so we can understand the operations key points and your facility type in order to better manage your IT / Network infrastructure and make sure your data and network is safe and protected. Our managed IT service package comes with remote monitoring and management which will avoid any network downtime by preventing threats before they can actually happen. </p>
+                        <p>Extensive experience with a diverse lineup of clients has taught us how IT procedures and processes works. With that said, <?= $GLOBALS['vars']['company_name']?> is a one-stop-shop for any IT related work such as IT consulting, IT services, IT support, and IT security.</p>
                         <p>We provide complete set of managed IT services for small & mid-sized businesses. Strategic planning is the key to delivering all of our managed IT services. If you are a small business with no IT department, we can manage all of your IT needs giving you the peace of mind needed to focus on your business. We offer remote monitoring and management so you idon’thave to worry about downtime anymore and we guarantee 99% uptime for your business. Here are some of our main IT  services we offer as a managed IT service provider:</p>
                         <ul class="mb-0 list">
                         <li><i class="fas fa-check-circle"></i>Desktop Management</li>
@@ -128,7 +133,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>Server Support</h3>
                         <div class="informationmain-right-content">
-                        <p>Secured Storage can help you build-out a private server infrastructure or implement a cloud-based environment or set-up a hybrid environment. Determining the appropriate system all depends on your company’s operational workflow and future-planning goals as well as financial factors. Secured Storage will provide you 24/7 remote server  monitoring avoiding any down time and guaranteed security.</p>
+                        <p><?= $GLOBALS['vars']['company_name']?> can help you build-out a private server infrastructure or implement a cloud-based environment or set-up a hybrid environment. Determining the appropriate system all depends on your company’s operational workflow and future-planning goals as well as financial factors. Secured Storage will provide you 24/7 remote server  monitoring avoiding any down time and guaranteed security.</p>
                      </div>
                      </div>
                   </div>
@@ -142,7 +147,7 @@
                         <h3>Server And Email Migration</h3>
                         <div class="informationmain-right-content">
                         <p>Most business owners don't have enough or no time to see the security details of their Information Technology infrastructure. All the knowledge usually lies with either in-house IT staff or an outside consultant. Critical policies, Security plans and procedures, passwords, and equipment uses are either not documented or not organized. We will implement the security policies and plans, document everything about your system architect, equipments, create business continuity plan, as well as simple backup and recovery plan in case of emergency.</p>
-                        <p>Secured Storage provides IT security consulting services to ensure you understand industry-set compliance, and to make sure that your business security is updated to the highest security standards.</p>
+                        <p><?= $GLOBALS['vars']['company_name']?> provides IT security consulting services to ensure you understand industry-set compliance, and to make sure that your business security is updated to the highest security standards.</p>
                      </div>
                      </div>
                   </div>
@@ -177,7 +182,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>Network Support</h3>
                         <div class="informationmain-right-content">
-                        <p>Secured Storage provides full networking services and solutions for wired and wireless networks from designing, implementing, securing, and maintenance. Please feel free to contact us for your free network assessment.</p>
+                        <p><?= $GLOBALS['vars']['company_name']?> provides full networking services and solutions for wired and wireless networks from designing, implementing, securing, and maintenance. Please feel free to contact us for your free network assessment.</p>
                      </div>
                      </div>
                   </div>
@@ -200,7 +205,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>User Profile Management</h3>
                         <div class="informationmain-right-content">
-                        <p>Secured Storage provides full networking services and solutions for wired and wireless networks from designing, implementing, securing, and maintenance. Please feel free to contact us for your free network assessment.</p>
+                        <p><?= $GLOBALS['vars']['company_name']?> provides full networking services and solutions for wired and wireless networks from designing, implementing, securing, and maintenance. Please feel free to contact us for your free network assessment.</p>
                      </div>
                      </div>
                   </div>
@@ -212,7 +217,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>Patch Management</h3>
                         <div class="informationmain-right-content">
-                        <p>Secured Storage's smart tools will automate across all servers throughout your network that we manage which seamlessly download and deliver all updates, service packs, patches and hot-fixes to the managed local servers as well as cloud hosted servers.Our patch management policy will ensure our clients that your IT systems will have the latest vital security patches and updates. </p>
+                        <p><?= $GLOBALS['vars']['company_name']?>'s smart tools will automate across all servers throughout your network that we manage which seamlessly download and deliver all updates, service packs, patches and hot-fixes to the managed local servers as well as cloud hosted servers.Our patch management policy will ensure our clients that your IT systems will have the latest vital security patches and updates. </p>
                      </div>
                      </div>
                   </div>
@@ -223,7 +228,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>Disk & Storage Management</h3>
                         <div class="informationmain-right-content">
-                        <p>Disk and Storage Management throughout the network is an vital part of the overall management of the network. By utilizing smart agents and monitoring tools, Secured Storage support team can keep an eye on every disk and storage location throughout the network.</p>
+                        <p>Disk and Storage Management throughout the network is an vital part of the overall management of the network. By utilizing smart agents and monitoring tools, <?= $GLOBALS['vars']['company_name']?> support team can keep an eye on every disk and storage location throughout the network.</p>
                      </div>
                      </div>
                   </div>
@@ -289,7 +294,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>Application Management</h3>
                         <div class="informationmain-right-content">
-                        <p>Various applications used throughout the network should be properly managed to ensure proper access to each application while protecting the application files and environment. Secured Storage team is highly experienced in distribution of access to various applications in many industries throughout the network.</p>
+                        <p>Various applications used throughout the network should be properly managed to ensure proper access to each application while protecting the application files and environment. <?= $GLOBALS['vars']['company_name']?> team is highly experienced in distribution of access to various applications in many industries throughout the network.</p>
                      </div>
                      </div>
                   </div>
@@ -300,7 +305,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>OS Support</h3>
                         <div class="informationmain-right-content">
-                        <p>Secured Storage can assist in any new OS installation, imaging, or repair for any platform such as Mac, Linux, Windows, Chrome, or any other common operating systems.</p>
+                        <p><?= $GLOBALS['vars']['company_name']?> can assist in any new OS installation, imaging, or repair for any platform such as Mac, Linux, Windows, Chrome, or any other common operating systems.</p>
                      </div>
                      </div>
                   </div>

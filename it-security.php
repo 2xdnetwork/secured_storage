@@ -1,10 +1,15 @@
+<?php
+require_once __DIR__ . '/app/DataHelper.php';
+$dataHelper = new DataHelper();
+$GLOBALS['vars'] = $dataHelper->data;
+?>
 <!DOCTYPE html>
 <html lang="zxx">
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <?php include 'includes/css.php'; ?> 
-      <title>IT Security |  Secured Storage, Los Angeles, CA</title>
+      <title>IT Security |  <?= $GLOBALS['vars']['company_name']?>, Los Angeles, CA</title>
    </head>
    <body>
       <!---header-and-banner-section-->
@@ -145,7 +150,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>It Security And Compliance Services For Production Studios And Content Owners In Media & Entertainment</h3>
                         <div class="informationmain-right-content">
-                        <p>ESecured Storage has worked with many production studios and content creators in media and entertainment industry to ensure their data and content security is in compliance with TPN “Trusted Partner Network” based on the latest security standards required by Motion Picture Association security guidelines which can be found on Motion Picture Association - MPA - best security practices.</p>
+                        <p><?= $GLOBALS['vars']['company_name']?> has worked with many production studios and content creators in media and entertainment industry to ensure their data and content security is in compliance with TPN “Trusted Partner Network” based on the latest security standards required by Motion Picture Association security guidelines which can be found on Motion Picture Association - MPA - best security practices.</p>
                         <p>One of our leading-edge IT security services we offer is network security solutions which consist of the security policies, protocols, and practices adopted to monitor unauthorized access, misuse, modification, or denial of a computer network which ultimately prevent from any cybersecurity breach or digital threat.</p>
                         <p>We work with you closely so we can help you creating and implementing all required IT security policies such as business continuity, security incident management, Internet acceptable, Server and workstation hardening policy, firewall policy, on-boarding and off-boarding policy, password policy, hard drive destruction policy, backup and recovery policy, patch management policy, change management policy, Wireless policy, and visitor’s policy. We will also help you designing your network diagram, network topology, IT Inventory and detailed IT documentation according to Motion Picture Association - MPA - best security practices.</p>
                         <p> We will also assist you conduct a risk assessment, network vulnerability scan, and penetration testing in classifying your assets and identifying your network vulnerabilities and how to remediate those flaws so you can execute a comprehensive content security plan.</p>
@@ -213,7 +218,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>Manage Cyber Security By Helping You Achieve Any Security Compliance.</h3>
                         <div class="informationmain-right-content">
-                        <p>SSecured Storage enables organizations to develope, document, and maintain compliance with common regulatory security frameworks. We work closely with your business to develop and standardize documentation processes framework as well as any cyber security planning and  implementations  in order to eliminate any obstacles associated with IT security compliance standards.</p>
+                        <p><?= $GLOBALS['vars']['company_name']?> enables organizations to develope, document, and maintain compliance with common regulatory security frameworks. We work closely with your business to develop and standardize documentation processes framework as well as any cyber security planning and  implementations  in order to eliminate any obstacles associated with IT security compliance standards.</p>
                      </div>
                      </div>
                   </div>
@@ -225,7 +230,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>Patch Management</h3>
                         <div class="informationmain-right-content">
-                        <p>Secured Storage's smart tools will automate across all servers throughout your network that we manage which seamlessly download and deliver all updates, service packs, patches and hot-fixes to the managed local servers as well as cloud hosted servers.Our patch management policy will ensure our clients that your IT systems will have the latest vital security patches and updates. </p>
+                        <p><?= $GLOBALS['vars']['company_name']?>'s smart tools will automate across all servers throughout your network that we manage which seamlessly download and deliver all updates, service packs, patches and hot-fixes to the managed local servers as well as cloud hosted servers.Our patch management policy will ensure our clients that your IT systems will have the latest vital security patches and updates. </p>
                      </div>
                      </div>
                   </div>
@@ -236,7 +241,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>Disk & Storage Management</h3>
                         <div class="informationmain-right-content">
-                        <p>Disk and Storage Management throughout the network is an vital part of the overall management of the network. By utilizing smart agents and monitoring tools, Secured Storage support team can keep an eye on every disk and storage location throughout the network.</p>
+                        <p>Disk and Storage Management throughout the network is an vital part of the overall management of the network. By utilizing smart agents and monitoring tools, <?= $GLOBALS['vars']['company_name']?> support team can keep an eye on every disk and storage location throughout the network.</p>
                      </div>
                      </div>
                   </div>
@@ -302,7 +307,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>Application Management</h3>
                         <div class="informationmain-right-content">
-                        <p>Various applications used throughout the network should be properly managed to ensure proper access to each application while protecting the application files and environment. Secured Storage team is highly experienced in distribution of access to various applications in many industries throughout the network.</p>
+                        <p>Various applications used throughout the network should be properly managed to ensure proper access to each application while protecting the application files and environment. <?= $GLOBALS['vars']['company_name']?> team is highly experienced in distribution of access to various applications in many industries throughout the network.</p>
                      </div>
                      </div>
                   </div>
@@ -313,7 +318,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>OS Support</h3>
                         <div class="informationmain-right-content">
-                        <p>Secured Storage can assist in any new OS installation, imaging, or repair for any platform such as Mac, Linux, Windows, Chrome, or any other common operating systems.</p>
+                        <p><?= $GLOBALS['vars']['company_name']?> can assist in any new OS installation, imaging, or repair for any platform such as Mac, Linux, Windows, Chrome, or any other common operating systems.</p>
                      </div>
                      </div>
                   </div>

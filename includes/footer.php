@@ -60,14 +60,14 @@
                               <ul class="list-unstyled mb-0 social-icon-list">
                                  <li class="weight-footer-item2-content col-lg-11 pl-0 pr-0">8242 W 3rd St Suite 302 <br>Los Angeles, CA 90048</li>
                                  <li>
-                                    <a href="mailto:contact@securedstorage.org">
-                                    contact@securedstorage.org 
+                                    <a href="mailto:contact@<?= $GLOBALS['vars']['domain']?>">
+                                    contact@<?= $GLOBALS['vars']['domain']?>
                                     </a>
                                  </li>
 
                                  <li>
-                                    <a href="mailto:support@securedstorage.org">
-                                    support@securedstorage.org 
+                                    <a href="mailto:support@<?= $GLOBALS['vars']['domain']?>">
+                                    support@<?= $GLOBALS['vars']['domain']?>
                                     </a>
                                  </li>
                                  <li>
@@ -84,9 +84,9 @@
                            </div>
                            <div class="weight-footer-item-form">
                               <div class="weight-footer-item-form-input">
-                                 <input type="email" placeholder="Enter your email">
+                                 <input type="email" placeholder="Enter your email" class="subscribeEmail">
                                  <button class="border-0" value="">
-                                 <img src="assets/image/submit-img.png" alt="submit-img" class="img-fluid">
+                                 <img src="assets/image/submit-img.png" alt="submit-img" class="img-fluid subscribe">
                                  </button>
                               </div>
                               <div class="form-group mb-0">
@@ -104,7 +104,7 @@
                   <div class="row">
                      <div class="col-lg-12">
                         <div class="footer-con text-center">
-                           <p>Secured Storage © <?php echo date('Y') ?>. All Rights Reserved. Design by <a target="_blank" href="https://www.weberous.com/">Weberous</a> |  <a href="terms-and-conditions.php">Terms and Conditions</a> |  <a href="privacy-policy.php">Privacy Policy</a></p>
+                           <p><?= $GLOBALS['vars']['company_name']?> © <?php echo date('Y') ?>. All Rights Reserved. Design by <a target="_blank" href="https://www.weberous.com/">Weberous</a> |  <a href="terms-and-conditions.php">Terms and Conditions</a> |  <a href="privacy-policy.php">Privacy Policy</a></p>
                         </div>
                      </div>
                   </div>
@@ -112,3 +112,34 @@
             </div>
          </div>
       </section>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $(document).on('click', '.subscribe', function (e){
+        e.preventDefault();
+        let email = $(document).find('.subscribeEmail').val();
+        if (!email) {
+            alert('Please enter email address');
+            return false;
+        }
+        if (!$(document).find('#html').is(":checked")) {
+            alert('You mast accept terms');
+            return false;
+        }
+        $.ajax({
+            url: '/subscribe.php',
+            data: {'email': email},
+            type: 'post',
+            success: function(response) {
+                let result = JSON.parse(response);
+                if (result.status === 'success') {
+                    alert('You have successfully subscribed');
+                    $(document).find('.subscribeEmail').val('');
+                } else {
+                    alert(result.message);
+                }
+            }
+        });
+        return false;
+    })
+</script>

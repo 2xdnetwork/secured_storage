@@ -1,10 +1,15 @@
+<?php
+require_once __DIR__ . '/app/DataHelper.php';
+$dataHelper = new DataHelper();
+$GLOBALS['vars'] = $dataHelper->data;
+?>
 <!DOCTYPE html>
 <html lang="zxx">
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <?php include 'includes/css.php'; ?> 
-      <title>Secured Storage | IT Consulting and Cyber Security Services in Los Angeles</title>
+      <title><?= $GLOBALS['vars']['company_name']?> | IT Consulting and Cyber Security Services in Los Angeles</title>
    </head>
    <body>
       <!---header-and-banner-section-->
@@ -121,7 +126,7 @@
                         </h2>
                      </div>
                      <div class="informationmain-right-content">
-                        <p>Our mission at Secured Storage is to provide enterprise-quality IT implementation services and seamless IT services at an affordable price. We provide IT consultancy and cyber security services in Los Angeles and the surrounding areas. Some of our services include:</p>
+                        <p>Our mission at <?= $GLOBALS['vars']['company_name']?> is to provide enterprise-quality IT implementation services and seamless IT services at an affordable price. We provide IT consultancy and cyber security services in Los Angeles and the surrounding areas. Some of our services include:</p>
                         <ul class="mb-0 list">
                            <li><i class="fas fa-check-circle"></i>IT Consulting</li>
                            <li><i class="fas fa-check-circle"></i>IT Services</li>
@@ -296,7 +301,7 @@
                      <div class="Cyber-Security-right-heading-con">
                         <h5>Serving Los Angeles</h5>
                         <h2>Helping Companies Solve Their It Problems</h2>
-                        <p>By providing proper IT consulting, IT security, IT services, and IT support, we aim to help others achieve their goals. We have received many requests from clients seeking to replace their current IT service provider due to poor performance or overcharging. In the Los Angeles area, Secured Storage has been trusted by many businesses as a managed IT service provider with the right tools, prices, and dedication.</p>
+                        <p>By providing proper IT consulting, IT security, IT services, and IT support, we aim to help others achieve their goals. We have received many requests from clients seeking to replace their current IT service provider due to poor performance or overcharging. In the Los Angeles area, <?= $GLOBALS['vars']['company_name']?> has been trusted by many businesses as a managed IT service provider with the right tools, prices, and dedication.</p>
                      </div>
                   </div>
                </div>

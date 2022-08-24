@@ -1,10 +1,15 @@
+<?php
+require_once __DIR__ . '/app/DataHelper.php';
+$dataHelper = new DataHelper();
+$GLOBALS['vars'] = $dataHelper->data;
+?>
 <!DOCTYPE html>
 <html lang="zxx">
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <?php include 'includes/css.php'; ?> 
-      <title>IT Consulting | Secured Storage, Los Angeles, CA</title>
+      <title>IT Consulting | <?= $GLOBALS['vars']['company_name']?>, Los Angeles, CA</title>
    </head>
    <body>
       <!---header-and-banner-section-->
@@ -102,7 +107,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>It Managed Services</h3>
                         <div class="informationmain-right-content">
-                        <p>Secured Storage is a leading IT services firm that specializes in managed IT services, managed cybersecurity, cloud solutions, and strategic IT consulting. We provides managed IT services for small & mid-sized businesses. Strategic planning is the key to delivering all of our managed IT services. If you are a small business with no IT department, we can manage all of your IT needs giving you the peace of mind needed to focus on your business.</p>
+                        <p><?= $GLOBALS['vars']['company_name']?> is a leading IT services firm that specializes in managed IT services, managed cybersecurity, cloud solutions, and strategic IT consulting. We provides managed IT services for small & mid-sized businesses. Strategic planning is the key to delivering all of our managed IT services. If you are a small business with no IT department, we can manage all of your IT needs giving you the peace of mind needed to focus on your business.</p>
                         <ul class="mb-0 list">
                            <li><i class="fas fa-check-circle"></i>Server management</li>
                            <li><i class="fas fa-check-circle"></i>Shared storage, NAS, & SAN management</li>
@@ -124,7 +129,7 @@
                      <div class="col-lg-12 col-md-12 col-12">
                         <h3>Cyber Security</h3>
                         <div class="informationmain-right-content">
-                        <p>Secured Storage specialized in cyber security which protect your network and ensure your firewall is setup and configured correctly.  We handle the main two type of security every company must have in place. one is your information security which covers how protect and safe your data will be. Two is your cyber security which covers your network security and how it has been setup and protect your network infrastructure from any sort of attacks which could be virus, hacking, malicious activity, DoS attack, etc.</p>
+                        <p><?= $GLOBALS['vars']['company_name']?> specialized in cyber security which protect your network and ensure your firewall is setup and configured correctly.  We handle the main two type of security every company must have in place. one is your information security which covers how protect and safe your data will be. Two is your cyber security which covers your network security and how it has been setup and protect your network infrastructure from any sort of attacks which could be virus, hacking, malicious activity, DoS attack, etc.</p>
                         <p><strong>We assure your network is healthy with no downtime and mainly your data is safe and protected.</strong></p>
                      </div>
                      </div>
@@ -139,7 +144,7 @@
                         <h3>It Policy</h3>
                         <div class="informationmain-right-content">
                         <p>Most business owners don't have enough or no time to see the security details of their Information Technology infrastructure. All the knowledge usually lies with either in-house IT staff or an outside consultant. Critical policies, Security plans and procedures, passwords, and equipment uses are either not documented or not organized. We will implement the security policies and plans, document everything about your system architect, equipments, create business continuity plan, as well as simple backup and recovery plan in case of emergency.</p>
-                        <p>Secured Storage provides IT security consulting services to ensure you understand industry-set compliance, and to make sure that your business security is updated to the highest security standards.</p>
+                        <p><?= $GLOBALS['vars']['company_name']?> provides IT security consulting services to ensure you understand industry-set compliance, and to make sure that your business security is updated to the highest security standards.</p>
                      </div>
                      </div>
                   </div>
@@ -157,7 +162,7 @@
                <div class="tabs-content mt-5 mb-5">
                         <h3>Data Backup Strategy And Disaster Recovery</h3>
                         <div class="informationmain-right-content">
-                        <p>Having a well executed data back strategy is the most important key for a survival of business regardless of size. We, Secured Storage, design, implement, test, and execute a custom plan for your business to ensure your data safety in case of any incident.  We also cover backup plan in all different platform from cloud to local as well as tape backup for archiving depending on your business requirements. Another key element besides of backup plan and execution plan is how the backed up data is secure and safe. The answer is data backup encryption which creates another security layer on top of your data that can protect your data from any security breaches such as virus, malware, and ransomware.</p>
+                        <p>Having a well executed data back strategy is the most important key for a survival of business regardless of size. We, <?= $GLOBALS['vars']['company_name']?>, design, implement, test, and execute a custom plan for your business to ensure your data safety in case of any incident.  We also cover backup plan in all different platform from cloud to local as well as tape backup for archiving depending on your business requirements. Another key element besides of backup plan and execution plan is how the backed up data is secure and safe. The answer is data backup encryption which creates another security layer on top of your data that can protect your data from any security breaches such as virus, malware, and ransomware.</p>
                      </div>
                      </div>
                   </div>

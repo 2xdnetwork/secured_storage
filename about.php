@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/app/DataHelper.php';
+$dataHelper = new DataHelper();
+$GLOBALS['vars'] = $dataHelper->data;
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -5,7 +10,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <?php include 'includes/css.php'; ?> 
-      <title> About Us | Secured Storage</title>
+      <title> About Us | <?= $GLOBALS['vars']['company_name']?></title>
    </head>
    <body>
       <!---header-and-banner-section-->
@@ -21,7 +26,7 @@
                         <div class="col-lg-12">
                            <div class="about-page-banner-title">
                               <h1>About Us</h1>
-                              <p class="mb-0">Secured Storage is a Los Angeles based IT consulting and managed IT service provider offering the following services:</p>
+                              <p class="mb-0"><?= $GLOBALS['vars']['company_name']?> is a Los Angeles based IT consulting and managed IT service provider offering the following services:</p>
                            </div>
                         </div>
                      </div>
@@ -107,7 +112,7 @@
 
 
                      <div class="informationmain-right-content mb-lg-5">
-                        <p>By providing proper IT consulting, IT security, IT services, and IT support, we aim to help others achieve their goals. In the past, we have been approached by clients who were disappointed in the performance of their current IT service provider, or were overcharged. Many local businesses in Los Angeles have trusted Secured Storage as their managed IT service provider because of our tools, prices, and dedication.</p>
+                        <p>By providing proper IT consulting, IT security, IT services, and IT support, we aim to help others achieve their goals. In the past, we have been approached by clients who were disappointed in the performance of their current IT service provider, or were overcharged. Many local businesses in Los Angeles have trusted <?= $GLOBALS['vars']['company_name']?> as their managed IT service provider because of our tools, prices, and dedication.</p>
                      </div>
 
 
@@ -239,7 +244,7 @@
                         <p>What makes us different from our competitors is our affordability, reliability, and responsiveness, which means that we are always available when our clients need us.  You can save time and money by having us manage your entire IT department. Our IT expenditures and purchases can also be managed. IT operations are streamlined, efficiency is improved, and technology administration is simplified. As long as your technology is running at optimum efficiency and 99% uptime, you can focus on expanding your business and servicing your clients.</p>
                      </div>
 
-                     <h2>Secured Storage has over a decades of experience helping companies solve their it problems and provide protection for any digital threat.</h2>
+                     <h2><?= $GLOBALS['vars']['company_name']?> has over a decades of experience helping companies solve their it problems and provide protection for any digital threat.</h2>
 
                      <div class="mt-lg-5">
                      <p style="color: #fff"><strong>We provide the following IT services and support:</strong></p>
