@@ -1,5 +1,8 @@
 <?php
 
+header("Location: under-construction.php"); 
+exit();
+
 class DataHelper
 {
     public $data = [];
